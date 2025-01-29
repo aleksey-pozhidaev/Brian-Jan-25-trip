@@ -19,8 +19,8 @@ where:  T     - radio's temperature
         PTxed - number of RF packets transmitted
         PRxed - number of RF packets received
 
-To tune Slave radio's receive, send to the radio CrystalUp or CrystalDwn commands and observe Preamble Rate, Rx Rate, and Header Rate. The goal is to maximize these numbers. In the case when Master is not transmitting RF packets with the data payloads, the Header Rate reported by the Slave will be the best indicator.
+To tune Slave radio's receive, send to the radio CrystalUp or CrystalDwn commands and observe Preamble Rate, Rx Rate, and Header Rate. The goal is to maximize these numbers. In the case when the Master is not transmitting RF packets with the data payloads, the Header Rate reported by the Slave will be the best indicator.
 
-For each CrystalUp and CrystalDwn command, radio's run-time Crystal will increment or decrement respectively. Its current value can be observed at the RAM address $10001F96, which can be viewed within the 'Data Display' LexNet's frame at the top raw labeled '$10001F90' under the seventh location labeled by "$6" on top of it.
+For each CrystalUp and CrystalDwn command, the radio's run-time Crystal will increment or decrement respectively. Its current value can be observed at the RAM address $10001F96, which can be viewed within the 'Data Display' LexNet's frame at the top raw labeled '$10001F90' under the seventh location labeled by "$6" on top of it.
 
-When done tunning, please use Commtel to write the resulted Crystal value into the radio's 605(decimal) address.
+When done tunning, please use Commtel to write the resulting Crystal value into the radio's 605(decimal) address.
